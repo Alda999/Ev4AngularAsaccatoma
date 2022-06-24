@@ -1,0 +1,27 @@
+<br>
+<div class="container">
+  <button type="button" class="btn btn-primary" [routerLink]="['/asignatura/form']">Agregar</button>
+</div>
+<br>
+<div class="card border-primary">
+  <div class="card-header border-primary">Lista de Asignaturas</div>
+  <div class="card-body border-primary">
+    <table class="table table-primarys">
+      <thead>
+        <tr>
+          <th scope="col">Denominacion</th>
+          <th scope="col">Sigla</th>
+          <th scope="col">Creditos</th>         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let itemAsignatura of asignaturaList" class="text-bg-secondary mb-3">
+          <td>{{itemAsignatura.denominacion}}</td>
+          <td>{{itemAsignatura.sigla}}</td>
+          <td>{{itemAsignatura.creditos}}</td>        
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  
